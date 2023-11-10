@@ -1,0 +1,24 @@
+textarea {
+
+    font-family: "Titillium Web", sans-serif;
+    border: 1px solid $blue-fanga;
+    background-color: transparent;
+    font-size: 1rem;
+    height: 100px;
+    outline: none;
+    padding: 10px;
+
+}
+
+//no grab select tal cual sino que usaremos una classname para hacerlo mas especifico
+
+.select-element {
+    border: 1px solid #ccc;
+    font-size: 0.8rem;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: transparent;
+    outline: none;
+}
+

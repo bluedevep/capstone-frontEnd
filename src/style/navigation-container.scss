@@ -1,0 +1,17 @@
+.nav-links-wrapper{
+    a {
+        margin-right: 15px;
+        cursor: pointer;
+        color: $blue-fanga;
+        transition: 0.5s ease-in-out;
+        text-decoration: none;
+        font-size: larger;
+    
+        &:hover {
+        color: $yellow-fanga;
+        }
+    }
+
+
+}
+

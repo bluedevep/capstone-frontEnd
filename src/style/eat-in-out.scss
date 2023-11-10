@@ -1,0 +1,76 @@
+.eat-in-out-component-wrapper {
+    
+    width: 1500px;
+    height: 700px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    gap: 5px;
+}
+
+.eat-in-out-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.eat-in-wrapper,
+.eat-out-wrapper {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+    margin: 0 100px; /* Añadido margen entre eat-in y eat-out */
+}
+
+.eat-in-img,
+.eat-out-img {
+    flex: 1;
+    height: 600px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    max-height: 600px;
+}
+
+.eat-in-img {
+    background-image: url('https://images2.imgbox.com/ce/55/Hxb5aYv4_o.jpg');
+}
+
+.eat-out-img {
+    background-image: url('https://images2.imgbox.com/08/9b/57dVbs0G_o.jpg');
+}
+
+.eat-in-text,
+.eat-out-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+.eat-out-text, .eat-in-text {
+    width: 150px; /* Ajusta el ancho según tus necesidades */
+}
+
+
+.languages,
+.cards-accepted {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        max-height: 25px;
+        width: auto;
+    }
+}
+
+.botton-nav {
+    text-align: center;
+    button {
+        width: 200px;
+    }
+}

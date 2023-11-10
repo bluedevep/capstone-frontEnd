@@ -1,0 +1,31 @@
+.body {
+    margin: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+.app-wrapper{
+    height: 100vh; /* Utiliza la altura completa del viewport, en un kiosk;height: 1920px; */
+    width: 100%; /* Utiliza el ancho completo del contenedor padre,width: 1080; */
+    
+    
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    height: 100%;
+
+    .icons{
+
+       
+        size: 40px;
+    }
+
+}
+
+
+
+
+    

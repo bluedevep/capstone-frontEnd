@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'fanga-font';
+    src: url('../fonts/Monument Regular/Monument\ Regular.ttf') format('truetype'); /* Ajusta la ruta y el formato según sea necesario */
+    /* También puedes incluir otros formatos de fuente aquí (por ejemplo, woff, woff2) para compatibilidad entre navegadores */
+}
+
+//todo import this font???
+
+
+@mixin base-btn {
+    cursor: pointer;
+    height: 42px;
+    font-size: 1em;
+    font-weight: 500;
+    border: 1px solid transparent;
+    transition: all 0.5 ease-in-out;
+    background-color: $blue-fanga;
+    color: white;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+
+    &:hover {
+        background-color: $yellow-fanga;
+        color: $blue-fanga;
+    }
+}
+
+@mixin input-element {
+
+    input {
+        font-family: "Titillium Web", sans-serif;
+        color: $charcoal;
+        padding: 5px 0px;
+        width: 100%;
+        border-top: 0px;
+        border-right: 0px;
+        border-left: 0px;
+        border-bottom: 1px solid $blue-fanga;
+        background-color: transparent;
+        transition: 0.5s all ease-in-out;
+        font-size: 1.1em;
+        margin-bottom: 21px;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1.5px solid $teal;
+        }
+    }
+}
+
+
+@mixin base-grid {
+    display: grid;
+    grid-gap: 21px;
+}

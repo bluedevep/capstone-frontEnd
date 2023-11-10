@@ -1,0 +1,76 @@
+.order-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+
+  .top-side {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px transparent;
+      box-shadow: 0px 12px 6px 2px rgba(0, 0, 0, 0.1);
+      padding-bottom: 15px; /* Ajustado el padding */
+      padding-top: 15px; /* Ajustado el padding */
+      min-height: auto; 
+    
+      .btn {
+        flex-shrink: 0;
+        margin: 0 30px; 
+        
+        font-size: 32px; /* Ajustado el margen */
+        
+        h1 {
+          margin: 0;
+          font-size: 32px; /* Ajustado el tamaño de la fuente */
+        }
+      }
+  }
+    
+
+  .middle-side {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+
+    .left-side-wrapper,
+    .right-side-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centrado vertical */
+    }
+
+    
+    .right-side {
+      /* display: flex; (Eliminado este estilo) */
+      border-left: 1px transparent;
+      box-shadow: -10px 0px 6px -5px rgba(0, 0, 0, 0.1); /* Sombra solo en el lado izquierdo */
+      padding-bottom: 15px; /* Ajustado el padding */
+      padding-top: 15px; /* Ajustado el padding */
+    }
+  }
+
+  .botton-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .btn {
+      flex-shrink: 0;
+      font-size: 16px; /* Ajustado el tamaño de la fuente */
+      
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+
+  .cancel-order-btn { 
+    flex-shrink: 0;
+    
+    margin: 0 30px;
+    
+    h1 {
+      margin: 0;
+      font-size: 16px;
+    }
+  }
+}

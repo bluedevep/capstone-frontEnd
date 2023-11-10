@@ -1,0 +1,82 @@
+.menu{
+  row-gap: 50px;
+}
+
+
+.top-section-wrapper{
+
+  
+  border-bottom: 1px transparent;
+  box-shadow: 0px 12px 6px 2px rgba(0, 0, 0, 0.1);
+  padding-bottom: 25px;
+  padding-top: 20px;
+}
+.cart-component{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .eatStatus{
+    padding-left: 25px;
+  }
+
+  .btn-payment{ 
+    display: flex;
+    justify-content: center;
+
+    .btn{ 
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 80%
+
+    }
+  }
+}
+
+
+
+
+
+
+.botton-section-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 30px;
+
+  .menu-section-wrapper{
+    margin-right: 50px;
+
+    .menu-items-heading-wrapper{
+      margin-bottom: 100px;
+    }
+  }
+
+  
+}
+
+
+
+.menu-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px; 
+    column-gap: 80px;
+  
+    .menu-item-wrapper {
+      position: relative;
+
+      .menu-item-buttons{
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+    }
+
+    
+}
+
+
+.sidebar{
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-top: 80px;
+}
