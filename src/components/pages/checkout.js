@@ -24,7 +24,7 @@ export default class Checkout extends Component {
 
   getIngredientsData() {
     axios
-    .get("http://127.0.0.1:5000/ingredients")
+    .get("https://fangaloka-db-b7b295303892.herokuapp.com/ingredients")
     .then(response => { 
       console.log("data", response.data);
       this.setState({ ingredientsData: response.data });  

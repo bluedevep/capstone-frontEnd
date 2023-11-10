@@ -19,7 +19,7 @@ export default class MenuForm extends Component {
       image: "",
       updated_price: null,
       editMode: false,
-      apiUrl: "http://127.0.0.1:5000/item",
+      apiUrl: "https://fangaloka-db-b7b295303892.herokuapp.com/item",
       apiAction: "post",
     };
 
@@ -94,7 +94,7 @@ export default class MenuForm extends Component {
         updated_price: null,
 
         editMode: true,
-        apiUrl: `http://127.0.0.1:5000/item/${id}`,
+        apiUrl: `https://fangaloka-db-b7b295303892.herokuapp.com/item/${id}`,
         apiAction: "patch",
       });
     }
@@ -142,7 +142,7 @@ export default class MenuForm extends Component {
 
   create(data) {
     axios
-      .post("http://127.0.0.1:5000/item", data, {
+      .post("https://fangaloka-db-b7b295303892.herokuapp.com/item", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -159,7 +159,7 @@ export default class MenuForm extends Component {
 
   edit(data) {
     axios
-      .patch(`http://127.0.0.1:5000/item/${this.state.id}`, data, {
+      .patch(`https://fangaloka-db-b7b295303892.herokuapp.com/item/${this.state.id}`, data, {
         headers: {
           "Content-Type": "application/json",
         },

@@ -40,7 +40,7 @@ export default class MenuManager extends Component {
     console.log("handleDeleteClick", menuItem);
 
     axios
-      .delete(`http://127.0.0.1:5000/item/${menuItem.id}`, {
+      .delete(`https://fangaloka-db-b7b295303892.herokuapp.com/item/${menuItem.id}`, {
         withCredentials: true,
       })
       .then((response) => {
@@ -77,7 +77,7 @@ export default class MenuManager extends Component {
 
   getMenuItems() {
     axios
-      .get("http://127.0.0.1:5000/items", { withCredentials: true })
+      .get("https://fangaloka-db-b7b295303892.herokuapp.com/items", { withCredentials: true })
       .then((response) => {
         console.log("response.data from getMenuItems", response.data);
         this.setState({

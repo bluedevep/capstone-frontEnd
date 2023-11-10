@@ -46,7 +46,7 @@ export default class MenuContainer extends Component {
 
     getMenuItems() {
         axios
-        .get("http://127.0.0.1:5000/items")
+        .get("https://fangaloka-db-b7b295303892.herokuapp.com/items")
         .then(response => { 
             console.log("response getMenuItems", response.data);           
             this.setState({

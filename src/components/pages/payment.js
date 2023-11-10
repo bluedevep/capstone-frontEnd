@@ -25,7 +25,7 @@ export default class Payment extends Component {
     const { cartItems, eatInOutStatus } = this.props.location.state;
     const total = cartItems.reduce((acc, item) => acc + item.subtotal, 0);
 
-    fetch("http://127.0.0.1:5000/stripe/secret/" + total)
+    fetch("https://fangaloka-db-b7b295303892.herokuapp.com/stripe/secret/" + total)
       .then((res) => res.json())
       .then(({client_secret}) => this.setState({clientSecret: client_secret}));
 

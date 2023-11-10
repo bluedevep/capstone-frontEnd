@@ -77,7 +77,7 @@ export default class SetUpItem extends Component {
   
   getItemIngredients() {
     axios
-    .get(`http://127.0.0.1:5000/menu_item_ingredients/${this.id}`)
+    .get(`https://fangaloka-db-b7b295303892.herokuapp.com/menu_item_ingredients/${this.id}`)
     .then(response => { 
         console.log("response", response);
         const includedIngredients = response.data.filter(ingredient => ingredient.is_included);
@@ -125,7 +125,7 @@ export default class SetUpItem extends Component {
 
   getIngredientsData() {
     axios
-    .get("http://127.0.0.1:5000/ingredients")
+    .get("https://fangaloka-db-b7b295303892.herokuapp.com/ingredients")
     .then(response => { 
       console.log("data", response.data);
       this.setState({

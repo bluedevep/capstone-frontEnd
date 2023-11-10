@@ -31,7 +31,7 @@ export default class Login extends Component {
   */
 
   handleSubmit(event) {
-    axios.post('http://127.0.0.1:5000/login', {
+    axios.post('https://fangaloka-db-b7b295303892.herokuapp.com/login', {
       username: this.state.username,
       password: this.state.password
     }, {
