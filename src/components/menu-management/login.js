@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import axios from 'axios'; 
+import axios from "axios";
 import { Redirect } from "react-router-dom";
 
 export default class Login extends Component {
@@ -9,21 +9,17 @@ export default class Login extends Component {
     this.state = {
       username: "",
       password: "",
-      errorText: ""
+      errorText: "",
     };
 
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    
   }
-
-
-  
 
   handleChange(event) {
     this.setState({
       [event.target.name]: event.target.value,
-      errorText: ""
+      errorText: "",
     });
   }
 
@@ -32,38 +28,43 @@ export default class Login extends Component {
   */
 
   handleSubmit(event) {
-    axios.post('https://fangaloka-db-b7b295303892.herokuapp.com/login', {
-      username: this.state.username,
-      password: this.state.password
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-      }
-    })
-    .then(response => {
-      // Check if the login was successful without using a token
-      if (response.message == 'Login successful') {
-        // Handle successful login
-       this.props.history.push("/menu-manager"); // Redirect to the main route
-      //  return <Redirect to='/menu-manager'/>
-      } else {
-        // Handle unsuccessful login
+    axios
+      .post(
+        "https://fangaloka-db-b7b295303892.herokuapp.com/login",
+        {
+          username: this.state.username,
+          password: this.state.password,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+      .then((response) => {
+        // Check if the login was successful without using a token
+        if (response.message === "Login successful") {
+          console.log(response);
+          // Handle successful login
+          return this.props.history.push("/menu-manager"); // Redirect to the main route
+          //  return <Redirect to='/menu-manager'/>
+        } else {
+          // Handle unsuccessful login
+          this.setState({
+            errorText: "Wrong username or password",
+          });
+          this.props.handleUnsuccessfulAuth();
+        }
+      })
+      .catch((error) => {
+        // Handle other errors
         this.setState({
-          errorText: "Wrong username or password"
+          errorText: "An error occurred",
         });
-        this.props.handleUnsuccessfulAuth();
-      }
-    })
-    .catch(error => {
-      // Handle other errors
-      this.setState({
-        errorText: "An error occurred"
       });
-    });
-  
+
     event.preventDefault();
   }
-  
 
   render() {
     return (
@@ -71,9 +72,8 @@ export default class Login extends Component {
         <h1>LOGIN TO ACCESS YOUR DASHBOARD</h1>
 
         <div>{this.state.errorText}</div>
-        
+
         <form onSubmit={this.handleSubmit}>
-          
           <input
             type="text"
             name="username"
