@@ -40,11 +40,12 @@ export default class Login extends Component {
       }
     })
     .then(response => {
-      const { token } = response.data;
-      if (token) {
-        localStorage.setItem('token', token);
-        this.props.history.push("/menu-manager"); // Redireccionar a la ruta principal
+      // Check if the login was successful without using a token
+      if (response.data.message === 'Login successful') {
+        // Handle successful login
+        this.props.history.push("/menu-manager"); // Redirect to the main route
       } else {
+        // Handle unsuccessful login
         this.setState({
           errorText: "Wrong username or password"
         });
@@ -52,10 +53,10 @@ export default class Login extends Component {
       }
     })
     .catch(error => {
+      // Handle other errors
       this.setState({
         errorText: "An error occurred"
       });
-  
     });
   
     event.preventDefault();
