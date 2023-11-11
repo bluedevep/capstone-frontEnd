@@ -1,6 +1,6 @@
 module.exports = {
   devServer: {
     host: 'localhost',
-    port: 3000
+    port: https://fangaloka-db-b7b295303892.herokuapp.com/
   }
 };
