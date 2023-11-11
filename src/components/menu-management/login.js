@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios'; 
+import { Redirect } from "react-router-dom";
 
 export default class Login extends Component {
   constructor(props) {
@@ -43,7 +44,8 @@ export default class Login extends Component {
       // Check if the login was successful without using a token
       if (response.data.message === 'Login successful') {
         // Handle successful login
-        this.props.history.push("/menu-manager"); // Redirect to the main route
+       // this.props.history.push("/menu-manager"); // Redirect to the main route
+       return <Redirect to='/menu-manager'/>
       } else {
         // Handle unsuccessful login
         this.setState({
