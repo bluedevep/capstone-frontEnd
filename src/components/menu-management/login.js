@@ -44,7 +44,7 @@ export default class Login extends Component {
       .then((response) => {
         // Check if the login was successful without using a token
         console.log("response", response);
-        if (response.message === "Login successful") {
+        if (response.status === 200) {
           // Handle successful login
           return this.props.history.push("/menu-manager"); // Redirect to the main route
           //  return <Redirect to='/menu-manager'/>
@@ -53,7 +53,7 @@ export default class Login extends Component {
           this.setState({
             errorText: "Wrong username or password",
           });
-          this.props.handleUnsuccessfulAuth();
+          // this.props.handleUnsuccessfulAuth();
         }
       })
       .catch((error) => {
